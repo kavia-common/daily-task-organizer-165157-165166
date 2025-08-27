@@ -1,0 +1,111 @@
+:root{
+  --color-ffffff:#ffffff;
+  --color-d6d7ef:#d6d7ef;
+  --color-9395d3:#9395d3;
+  --color-8b8787:#8b8787;
+  --color-000000:#000000;
+  --color-d1d1d6:#d1d1d6;
+  --color-ebebf5:#ebebf5;
+  --color-34c759:#34c759;
+  --color-ffd60a:#ffd60a;
+  --color-b3b7ee:#b3b7ee;
+
+  --font-family-jost:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+  --typo-8-size:24px;
+  --typo-8-weight:600;
+  --typo-8-line:34.68px;
+  --typo-8-color:var(--color-ffffff);
+
+  --typo-9-size:13px;
+  --typo-9-weight:600;
+  --typo-9-line:18.785px;
+  --typo-9-color:var(--color-9395d3);
+
+  --typo-10-size:10px;
+  --typo-10-weight:400;
+  --typo-10-line:14.45px;
+  --typo-10-color:var(--color-000000);
+
+  --radius-1:1px;
+  --radius-15:15px;
+  --radius-20:20px;
+
+  --shadow-0:0 4px 4px rgba(0,0,0,0.20);
+
+  --screen-width:414px;
+  --appbar-height:118px;
+  --statusbar-height:44px;
+  --page-padding:14px;
+}
+
+.container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.viewport{
+  width:var(--screen-width);
+  min-height:896px;
+  position:relative;
+  background:var(--color-d6d7ef);
+}
+
+.statusBar{
+  height:var(--statusbar-height);
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 12px;
+  font-size:12px;
+  color:#222;
+  background:transparent;
+}
+
+.appBar{
+  height:var(--appbar-height);
+  width:100%;
+  background:var(--color-9395d3);
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  padding:0 var(--page-padding) 14px var(--page-padding);
+}
+
+.backButton{
+  position:absolute;
+  left:16px;
+  top:72px;
+  width:25px;
+  height:25px;
+  border:3px solid var(--color-ffffff);
+  border-right:0;
+  border-top:0;
+  transform:rotate(45deg);
+  background:transparent;
+  cursor:pointer;
+  outline:none;
+}
+
+.appBarTitle{
+  margin:0 auto;
+  color:var(--typo-8-color);
+  font-size:var(--typo-8-size);
+  font-weight:var(--typo-8-weight);
+  line-height:var(--typo-8-line);
+}
+
+.content{
+  padding-top:12px;
+  padding-bottom:24px;
+}
+
+@media (min-width: 500px){
+  .viewport{
+    margin:24px auto;
+    border-radius:16px;
+    overflow:hidden;
+  }
+}
