@@ -1,0 +1,81 @@
+.fieldLabel{
+  margin:0 0 7px 0;
+  color: var(--color-8b8787);
+  font-family: var(--font-family-jost);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+}
+
+.fieldGroup{
+  width: calc(100% - 2*var(--page-padding));
+  margin: 0 var(--page-padding);
+}
+
+.fieldUnderline{
+  border-bottom: 1px solid var(--color-8b8787);
+  padding-bottom: 6px;
+}
+
+.fieldInput{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 6px 0 0 0;
+  background: transparent;
+  color: var(--color-000000);
+  font-family: var(--font-family-jost);
+  font-size: 15px;
+  line-height: 21.675px;
+}
+
+.fieldInput::placeholder{
+  color: var(--color-8b8787);
+  opacity: 0.9;
+}
+
+.buttonBlock{
+  width: calc(100% - 2*var(--page-padding));
+  margin: 28px var(--page-padding) 0 var(--page-padding);
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBtn{
+  width: 100%;
+  max-width: 386px;
+  height: 65.0652160645px;
+  border-radius: var(--radius-15);
+  background: var(--color-9395d3);
+  box-shadow: var(--shadow-0);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ctaText{
+  color: var(--color-ffffff);
+  font-family: var(--font-family-jost);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28.9px;
+}
+
+.buttonRow{
+  width: calc(100% - 2*var(--page-padding));
+  margin: 28px var(--page-padding) 0 var(--page-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 374px){
+  .ctaBtn{
+    width: calc((100% - 16px)/2);
+    height: 60px;
+  }
+}

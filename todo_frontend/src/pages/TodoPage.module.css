@@ -1,0 +1,115 @@
+.appBarCalendar{
+  position:absolute;
+  right:14px;
+  top:22px;
+  width:32px;
+  height:32px;
+  border-radius:8px;
+  background: var(--color-ffffff);
+  opacity: 0.0;
+}
+
+.bottomNav{
+  position: sticky;
+  top: calc(var(--statusbar-height) + var(--appbar-height));
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 10px 28px;
+  height:68px;
+  background: var(--color-ffffff);
+  box-shadow: var(--shadow-0);
+  border-radius: var(--radius-15);
+  width: calc(100% - 2*var(--page-padding));
+  margin: 16px var(--page-padding) 8px var(--page-padding);
+}
+
+.navBtn{
+  appearance:none;
+  border:0;
+  background:transparent;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.label{
+  font-size: var(--typo-10-size);
+  line-height: var(--typo-10-line);
+  font-weight: var(--typo-10-weight);
+  color: var(--color-000000);
+}
+
+.all .label{ color: var(--color-9395d3); }
+.completed .label{ color: var(--color-8b8787); }
+
+.active .label{
+  text-decoration: underline;
+}
+
+.icon{
+  width:30px; height:30px;
+  border:1.5px solid var(--color-9395d3);
+  border-radius:6px;
+  position:relative;
+}
+
+.tick{
+  border-color: var(--color-8b8787);
+}
+
+.playlist::before, .playlist::after{
+  content:"";
+  position:absolute; left:6px; right:6px;
+  height:1.5px; background: var(--color-9395d3);
+}
+.playlist::before{ top:9px; }
+.playlist::after{ bottom:9px; }
+
+.tick::before{
+  content:"";
+  position:absolute;
+  width:12px; height:6px;
+  border-left:1.5px solid var(--color-8b8787);
+  border-bottom:1.5px solid var(--color-8b8787);
+  transform: rotate(-45deg);
+  left:7px; top:10px;
+}
+
+.fabAdd{
+  position: absolute;
+  right: calc(var(--page-padding) + 14px);
+  bottom: 24px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background: var(--color-9395d3);
+  box-shadow: var(--shadow-0);
+  border:0;
+  cursor:pointer;
+}
+.fabAdd::before, .fabAdd::after{
+  content:"";
+  position:absolute;
+  background: var(--color-ffffff);
+  border-radius: 1px;
+}
+.fabAdd::before{
+  width: 22px; height: 2px;
+  left:50%; top:50%;
+  transform: translate(-50%,-50%);
+}
+.fabAdd::after{
+  width: 2px; height: 22px;
+  left:50%; top:50%;
+  transform: translate(-50%,-50%);
+}
+
+@media (min-width: 500px){
+  .fabAdd{
+    right: calc((100vw - var(--screen-width))/2 + var(--page-padding) + 14px);
+  }
+}
